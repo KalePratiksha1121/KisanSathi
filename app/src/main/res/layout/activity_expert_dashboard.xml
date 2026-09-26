@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/kisan_background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:id="@+id/expertDashboardRoot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="20dp"
+        android:paddingTop="18dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="30dp">
+
+        <!-- ========================= -->
+        <!-- HEADER -->
+        <!-- ========================= -->
+
+        <LinearLayout
+            android:id="@+id/expertHeaderSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/expertGreetingText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hello, Expert 👋"
+                    android:textColor="@color/dark_green"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/expertNameText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Expert"
+                    android:textColor="@color/secondary_text"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/expertProfileIcon"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:background="@drawable/language_card"
+                android:gravity="center"
+                android:text="👤"
+                android:textSize="24sp" />
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+        <!-- ========================= -->
+        <!-- EXPERT INTRO CARD -->
+        <!-- ========================= -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="145dp"
+            android:background="@drawable/dashboard_scan_card"
+            android:elevation="5dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="20dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🌿"
+                    android:textSize="32sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Expert Validation"
+                    android:textColor="@android:color/white"
+                    android:textSize="21sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Review farmer crop cases and provide trusted guidance"
+                    android:textColor="#E8F5E9"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@drawable/circle_white"
+                android:gravity="center"
+                android:text="🩺"
+                android:textSize="34sp" />
+
+        </LinearLayout>
+
+        <!-- ========================= -->
+        <!-- CASE OVERVIEW -->
+        <!-- ========================= -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="23dp"
+            android:text="Case Overview"
+            android:textColor="@color/dark_green"
+            android:textSize="19sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="125dp"
+            android:layout_marginTop="11dp"
+            android:orientation="horizontal">
+
+            <!-- Pending -->
+
+            <LinearLayout
+                android:id="@+id/pendingCasesCard"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="6dp"
+                android:layout_weight="1"
+                android:background="@drawable/language_card"
+                android:clickable="true"
+                android:elevation="2dp"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📋"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/pendingCountText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="0"
+                    android:textColor="@color/dark_green"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pending Cases"
+                    android:textColor="@color/secondary_text"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+
+            <!-- High Priority -->
+
+            <LinearLayout
+                android:id="@+id/priorityCard"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="6dp"
+                android:layout_weight="1"
+                android:background="@drawable/language_card"
+                android:clickable="true"
+                android:elevation="2dp"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="⚠️"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/priorityCountText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="0"
+                    android:textColor="@color/dark_green"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="High Priority"
+                    android:textColor="@color/secondary_text"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- ========================= -->
+        <!-- RECENT CASES -->
+        <!-- ========================= -->
+
+        <LinearLayout
+            android:id="@+id/recentCasesSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="23dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Recent Cases"
+                android:textColor="@color/dark_green"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+            <!-- Case 1 -->
+
+            <TextView
+                android:id="@+id/expertCaseCardOne"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp"
+                android:background="@drawable/language_card"
+                android:clickable="true"
+                android:elevation="2dp"
+                android:focusable="true"
+                android:lineSpacingExtra="3dp"
+                android:padding="17dp"
+                android:text="No pending cases yet
+New farmer submissions will appear here."
+                android:textColor="@color/dark_green"
+                android:textSize="14sp" />
+
+            <!-- Case 2 -->
+
+            <TextView
+                android:id="@+id/expertCaseCardTwo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/language_card"
+                android:clickable="true"
+                android:elevation="2dp"
+                android:focusable="true"
+                android:lineSpacingExtra="3dp"
+                android:padding="17dp"
+                android:text="No second pending case
+Waiting for another farmer submission."
+                android:textColor="@color/dark_green"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <!-- ========================= -->
+        <!-- INFORMATION CARD -->
+        <!-- ========================= -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:background="@drawable/weather_card"
+            android:elevation="2dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:gravity="center"
+                android:text="✓"
+                android:textColor="@color/dark_green"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Expert Review Matters"
+                    android:textColor="@color/dark_green"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="Validate AI results before farmers receive guidance."
+                    android:textColor="@color/secondary_text"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

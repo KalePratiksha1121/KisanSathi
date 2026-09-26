@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- App -->
+    <string name="app_name" translatable="false">Kisan Sathi</string>
+
+    <!-- Splash -->
+    <string name="splash_tagline">तुमचा स्मार्ट शेती साथी</string>
+    <string name="loading">लोड होत आहे...</string>
+
+    <!-- Language -->
+    <string name="choose_language">भाषा निवडा</string>
+    <string name="choose_language_subtitle">तुमची पसंतीची भाषा निवडा</string>
+    <string name="english">English</string>
+    <string name="marathi">मराठी</string>
+    <string name="hindi">हिन्दी</string>
+    <string name="gujarati">ગુજરાતી</string>
+    <string name="punjabi">ਪੰਜਾਬੀ</string>
+    <string name="continue_text">पुढे जा</string>
+
+    <!-- Profile -->
+    <string name="create_profile">तुमचे प्रोफाइल तयार करा</string>
+    <string name="profile_subtitle">तुमच्याबद्दल थोडी माहिती द्या</string>
+    <string name="farmer">शेतकरी</string>
+    <string name="expert">कृषी तज्ज्ञ</string>
+    <string name="i_am_a">मी आहे</string>
+    <string name="full_name">पूर्ण नाव</string>
+    <string name="mobile_number">मोबाईल नंबर</string>
+    <string name="village">गाव</string>
+    <string name="district">जिल्हा</string>
+
+    <!-- Mobile Verification -->
+    <string name="mobile_verification">मोबाईल पडताळणी</string>
+    <string name="mobile_verification_subtitle">पुढे जाण्यासाठी तुमचा भारतीय मोबाईल नंबर टाका</string>
+    <string name="mobile_number_hint">१० अंकी मोबाईल नंबर</string>
+    <string name="send_otp">OTP पाठवा</string>
+    <string name="invalid_mobile">वैध भारतीय मोबाईल नंबर टाका</string>
+
+    <!-- OTP Verification -->
+    <string name="otp_verification">OTP पडताळणी</string>
+    <string name="otp_subtitle">तुमच्या मोबाईल नंबरवर पाठवलेला ६ अंकी OTP टाका</string>
+    <string name="enter_otp">OTP टाका</string>
+    <string name="otp_hint">६ अंकी OTP</string>
+    <string name="verify_otp">OTP पडताळा</string>
+    <string name="resend_otp">OTP पुन्हा पाठवा</string>
+
+    <!-- OTP Messages -->
+    <string name="sending_otp">OTP पाठवत आहे...</string>
+    <string name="otp_invalid_request">तुमचा मोबाईल नंबर तपासा आणि पुन्हा प्रयत्न करा.</string>
+    <string name="otp_quota_exceeded">OTP विनंतीची मर्यादा पूर्ण झाली आहे. कृपया नंतर पुन्हा प्रयत्न करा.</string>
+    <string name="otp_verification_failed">OTP पडताळणी सुरू करता आली नाही. कृपया पुन्हा प्रयत्न करा.</string>
+    <string name="enter_otp_error">कृपया OTP टाका.</string>
+    <string name="enter_valid_otp">कृपया ६ अंकी OTP टाका.</string>
+    <string name="otp_session_expired">या OTP सत्राची मुदत संपली आहे. कृपया नवीन OTP मागवा.</string>
+    <string name="phone_verified">मोबाईल नंबरची यशस्वीपणे पडताळणी झाली.</string>
+    <string name="invalid_otp">अवैध OTP. कृपया कोड तपासा आणि पुन्हा प्रयत्न करा.</string>
+    <string name="resend_otp_later">पुन्हा OTP मागण्यापूर्वी कृपया थोडा वेळ प्रतीक्षा करा.</string>
+
+    <!-- Farmer Dashboard -->
+    <string name="farmer_default_name">शेतकरी</string>
+    <string name="farmer_greeting">नमस्कार, %1$s 👋</string>
+    <string name="dashboard_subtitle">तुमची पिके निरोगी ठेवूया</string>
+    <string name="check_your_crop">तुमचे पीक तपासा</string>
+    <string name="capture_leaf_health">पानाचा फोटो काढा आणि त्याचे आरोग्य तपासा</string>
+    <string name="scan_now">आता स्कॅन करा  →</string>
+    <string name="crop_overview">पीक आढावा</string>
+    <string name="healthy">निरोगी</string>
+    <string name="your_crops">तुमची पिके</string>
+    <string name="scans">स्कॅन</string>
+    <string name="alerts">सूचना</string>
+    <string name="todays_farm_weather">आजचे शेतातील हवामान</string>
+    <string name="weather_information">हवामानाची माहिती</string>
+    <string name="your_farm">तुमचे शेत</string>
+    <string name="farm_location">शेताचे ठिकाण</string>
+    <string name="village_district">गाव • जिल्हा</string>
+    <string name="quick_actions">जलद कृती</string>
+    <string name="my_scans">माझे स्कॅन</string>
+    <string name="crop_progress">पिकाची प्रगती</string>
+
+</resources>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/kisan_background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- OTP Icon -->
+        <TextView
+            android:id="@+id/otpIcon"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="45dp"
+            android:background="@drawable/language_icon_background"
+            android:gravity="center"
+            android:text="🔐"
+            android:textSize="30sp" />
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/otpTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:text="@string/otp_verification"
+            android:textColor="@color/dark_green"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <!-- Subtitle -->
+        <TextView
+            android:id="@+id/otpSubtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:lineSpacingExtra="3dp"
+            android:text="@string/otp_subtitle"
+            android:textColor="@color/secondary_text"
+            android:textSize="15sp" />
+
+        <!-- OTP Label -->
+        <TextView
+            android:id="@+id/otpLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="42dp"
+            android:text="@string/enter_otp"
+            android:textColor="@color/dark_green"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- OTP Input -->
+        <EditText
+            android:id="@+id/otpInput"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/language_card"
+            android:gravity="center"
+            android:hint="@string/otp_hint"
+            android:inputType="number"
+            android:maxLength="6"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:textColor="@color/dark_green"
+            android:textColorHint="@color/secondary_text"
+            android:textSize="20sp"
+            android:letterSpacing="0.2" />
+
+        <!-- Verify Button -->
+        <TextView
+            android:id="@+id/verifyOtpButton"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/continue_button"
+            android:gravity="center"
+            android:text="@string/verify_otp"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <!-- Resend -->
+        <TextView
+            android:id="@+id/resendOtpButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="22dp"
+            android:padding="10dp"
+            android:text="@string/resend_otp"
+            android:textColor="@color/primary_green"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</ScrollView>

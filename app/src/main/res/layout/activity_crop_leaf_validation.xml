@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/validationRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/kisan_background">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="20dp"
+            android:paddingTop="18dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="30dp">
+
+            <!-- Header -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/validationBackButton"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/circle_white"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:text="‹"
+                    android:textColor="@color/dark_green"
+                    android:textSize="32sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Crop Validation"
+                        android:textColor="@color/dark_green"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/validationSubtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="Checking whether the image contains a crop leaf"
+                        android:textColor="@color/secondary_text"
+                        android:textSize="13sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Image -->
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/language_card"
+                android:elevation="3dp"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/validationCropImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="Crop leaf image"
+                    android:scaleType="centerCrop" />
+
+                <LinearLayout
+                    android:id="@+id/validationOverlay"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#B3F8FBF6"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ProgressBar
+                        android:id="@+id/validationProgress"
+                        android:layout_width="52dp"
+                        android:layout_height="52dp"
+                        android:indeterminate="true" />
+
+                    <TextView
+                        android:id="@+id/validationProcessingText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="Validating crop image..."
+                        android:textColor="@color/dark_green"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <!-- Result Card -->
+
+            <LinearLayout
+                android:id="@+id/validationResultCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/language_card"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="18dp">
+
+                <TextView
+                    android:id="@+id/validationIcon"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/circle_soft_green"
+                    android:gravity="center"
+                    android:text="🌿"
+                    android:textSize="23sp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="13dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/validationTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Crop validation in progress"
+                        android:textColor="@color/dark_green"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/validationDescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Checking whether this is a supported crop leaf."
+                        android:textColor="@color/secondary_text"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Validation Steps -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Validation Steps"
+                android:textColor="@color/dark_green"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/validationSteps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/language_card"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/imageQualityValidationStep"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:text="✓  Image quality accepted"
+                    android:textColor="@color/dark_green"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/cropValidationStep"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:text="◐  Crop / leaf validation"
+                    android:textColor="@color/secondary_text"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/diseaseValidationStep"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:text="○  Disease detection"
+                    android:textColor="@color/secondary_text"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <!-- Continue Button -->
+
+            <TextView
+                android:id="@+id/continueToDiseaseButton"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/scan_now_button"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:text="Continue to Disease Detection"
+                android:textColor="@color/dark_green"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <!-- Capture Again -->
+
+            <TextView
+                android:id="@+id/captureAgainButton"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/circle_white"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:text="Capture Another Photo"
+                android:textColor="@color/dark_green"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>

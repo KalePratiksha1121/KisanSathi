@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- App -->
+    <string name="app_name" translatable="false">Kisan Sathi</string>
+
+    <!-- Splash -->
+    <string name="splash_tagline">તમારો સ્માર્ટ ખેતી સાથી</string>
+    <string name="loading">લોડ થઈ રહ્યું છે...</string>
+
+    <!-- Language -->
+    <string name="choose_language">ભાષા પસંદ કરો</string>
+    <string name="choose_language_subtitle">તમારી પસંદગીની ભાષા પસંદ કરો</string>
+    <string name="english">English</string>
+    <string name="marathi">मराठी</string>
+    <string name="hindi">हिन्दी</string>
+    <string name="gujarati">ગુજરાતી</string>
+    <string name="punjabi">ਪੰਜਾਬੀ</string>
+    <string name="continue_text">ચાલુ રાખો</string>
+
+    <!-- Profile -->
+    <string name="create_profile">તમારી પ્રોફાઇલ બનાવો</string>
+    <string name="profile_subtitle">તમારા વિશે થોડી માહિતી આપો</string>
+    <string name="farmer">ખેડૂત</string>
+    <string name="expert">કૃષિ નિષ્ણાત</string>
+    <string name="i_am_a">હું છું</string>
+    <string name="full_name">પૂરું નામ</string>
+    <string name="mobile_number">મોબાઇલ નંબર</string>
+    <string name="village">ગામ</string>
+    <string name="district">જિલ્લો</string>
+
+    <!-- Mobile Verification -->
+    <string name="mobile_verification">મોબાઇલ ચકાસણી</string>
+    <string name="mobile_verification_subtitle">આગળ વધવા માટે તમારો ભારતીય મોબાઇલ નંબર દાખલ કરો</string>
+    <string name="mobile_number_hint">10 અંકનો મોબાઇલ નંબર</string>
+    <string name="send_otp">OTP મોકલો</string>
+    <string name="invalid_mobile">માન્ય ભારતીય મોબાઇલ નંબર દાખલ કરો</string>
+
+    <!-- OTP Verification -->
+    <string name="otp_verification">OTP ચકાસણી</string>
+    <string name="otp_subtitle">તમારા મોબાઇલ નંબર પર મોકલાયેલ 6 અંકનો OTP દાખલ કરો</string>
+    <string name="enter_otp">OTP દાખલ કરો</string>
+    <string name="otp_hint">6 અંકનો OTP</string>
+    <string name="verify_otp">OTP ચકાસો</string>
+    <string name="resend_otp">OTP ફરી મોકલો</string>
+
+    <!-- OTP Messages -->
+    <string name="sending_otp">OTP મોકલવામાં આવી રહ્યો છે...</string>
+    <string name="otp_invalid_request">કૃપા કરીને તમારો મોબાઇલ નંબર તપાસો અને ફરી પ્રયાસ કરો.</string>
+    <string name="otp_quota_exceeded">OTP વિનંતીની મર્યાદા પૂર્ણ થઈ ગઈ છે. કૃપા કરીને પછીથી પ્રયાસ કરો.</string>
+    <string name="otp_verification_failed">OTP ચકાસણી શરૂ કરી શકાઈ નથી. કૃપા કરીને ફરી પ્રયાસ કરો.</string>
+    <string name="enter_otp_error">કૃપા કરીને OTP દાખલ કરો.</string>
+    <string name="enter_valid_otp">કૃપા કરીને 6 અંકનો OTP દાખલ કરો.</string>
+    <string name="otp_session_expired">આ OTP સત્રની સમયમર્યાદા સમાપ્ત થઈ ગઈ છે. કૃપા કરીને નવો OTP માંગો.</string>
+    <string name="phone_verified">મોબાઇલ નંબર સફળતાપૂર્વક ચકાસવામાં આવ્યો.</string>
+    <string name="invalid_otp">અમાન્ય OTP. કૃપા કરીને કોડ તપાસો અને ફરી પ્રયાસ કરો.</string>
+    <string name="resend_otp_later">ફરીથી OTP માંગતા પહેલાં કૃપા કરીને રાહ જુઓ.</string>
+
+    <!-- Farmer Dashboard -->
+    <string name="farmer_default_name">ખેડૂત</string>
+    <string name="farmer_greeting">નમસ્તે, %1$s 👋</string>
+    <string name="dashboard_subtitle">ચાલો તમારા પાકને સ્વસ્થ રાખીએ</string>
+    <string name="check_your_crop">તમારો પાક તપાસો</string>
+    <string name="capture_leaf_health">પાનનો ફોટો લો અને તેનું સ્વાસ્થ્ય તપાસો</string>
+    <string name="scan_now">હમણાં સ્કેન કરો  →</string>
+    <string name="crop_overview">પાકની ઝાંખી</string>
+    <string name="healthy">તંદુરસ્ત</string>
+    <string name="your_crops">તમારા પાક</string>
+    <string name="scans">સ્કેન</string>
+    <string name="alerts">સૂચનાઓ</string>
+    <string name="todays_farm_weather">આજનું ખેતરનું હવામાન</string>
+    <string name="weather_information">હવામાનની માહિતી</string>
+    <string name="your_farm">તમારું ખેતર</string>
+    <string name="farm_location">ખેતરનું સ્થાન</string>
+    <string name="village_district">ગામ • જિલ્લો</string>
+    <string name="quick_actions">ઝડપી કાર્યો</string>
+    <string name="my_scans">મારા સ્કેન</string>
+    <string name="crop_progress">પાકની પ્રગતિ</string>
+
+</resources>

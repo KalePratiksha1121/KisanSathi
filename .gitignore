@@ -1,0 +1,33 @@
+*.iml
+
+# Gradle
+.gradle/
+build/
+/build/
+**/build/
+.idea/
+
+# Local SDK configuration
+/local.properties
+local.properties
+
+# Android Studio
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+
+# Android generated files
+/captures
+.externalNativeBuild
+.cxx
+
+# Generated packages
+*.apk
+*.aab
+
+# OS files
+.DS_Store
+Thumbs.db

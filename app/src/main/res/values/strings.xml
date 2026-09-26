@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name" translatable="false">Kisan Sathi</string>
+
+    <!-- Splash -->
+    <string name="splash_tagline" translatable="false">Your Smart Farming Companion</string>
+    <string name="loading" translatable="false">Loading...</string>
+
+    <!-- Language -->
+    <string name="choose_language" translatable="false">Choose Language</string>
+    <string name="choose_language_subtitle" translatable="false">Select your preferred language</string>
+    <string name="english" translatable="false">English</string>
+    <string name="marathi" translatable="false">मराठी</string>
+    <string name="hindi" translatable="false">हिन्दी</string>
+    <string name="gujarati" translatable="false">ગુજરાતી</string>
+    <string name="punjabi" translatable="false">ਪੰਜਾਬੀ</string>
+    <string name="continue_text" translatable="false">Continue</string>
+
+    <!-- Profile -->
+    <string name="create_profile" translatable="false">Create Your Profile</string>
+    <string name="profile_subtitle" translatable="false">Tell us a little about yourself</string>
+    <string name="farmer" translatable="false">Farmer</string>
+    <string name="expert" translatable="false">Agricultural Expert</string>
+
+
+    <string name="i_am_a">I am a</string>
+    <string name="full_name">Full Name</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="village">Village</string>
+    <string name="district">District</string>
+
+
+    <string name="mobile_verification">Mobile Verification</string>
+    <string name="mobile_verification_subtitle">Enter your Indian mobile number to continue</string>
+
+    <string name="mobile_number_hint">10-digit mobile number</string>
+    <string name="send_otp">Send OTP</string>
+    <string name="invalid_mobile">Enter a valid Indian mobile number</string>
+
+    <string name="otp_verification">OTP Verification</string>
+    <string name="otp_subtitle">Enter the 6-digit OTP sent to your mobile number</string>
+    <string name="enter_otp">Enter OTP</string>
+    <string name="otp_hint">6-digit OTP</string>
+    <string name="verify_otp">Verify OTP</string>
+    <string name="resend_otp">Resend OTP</string>
+
+
+    <string name="sending_otp">Sending OTP...</string>
+    <string name="otp_invalid_request">Please check your mobile number and try again.</string>
+    <string name="otp_quota_exceeded">OTP request limit reached. Please try again later.</string>
+    <string name="otp_verification_failed">OTP verification could not be started. Please try again.</string>
+    <string name="enter_otp_error">Please enter the OTP.</string>
+    <string name="enter_valid_otp">Please enter the 6-digit OTP.</string>
+    <string name="otp_session_expired">This OTP session has expired. Please request a new OTP.</string>
+    <string name="phone_verified">Mobile number verified successfully.</string>
+    <string name="invalid_otp">Invalid OTP. Please check the code and try again.</string>
+    <string name="resend_otp_later">Please wait before requesting another OTP.</string>
+
+
+    <string name="farmer_default_name">Farmer</string>
+    <string name="farmer_greeting">Hello, %1$s</string>
+
+    <string name="dashboard_subtitle">Monitor your crops and farm health</string>
+
+    <string name="check_your_crop">Check Your Crop</string>
+    <string name="capture_leaf_health">Capture a leaf photo and check its health</string>
+    <string name="scan_now">Scan Now</string>
+
+    <string name="crop_overview">Crop Overview</string>
+    <string name="healthy">Healthy</string>
+    <string name="your_crops">Your crops</string>
+    <string name="scans">Scans</string>
+    <string name="alerts">Alerts</string>
+    <string name="todays_farm_weather">Farm Weather</string>
+    <string name="weather_information">Weather information</string>
+
+    <string name="your_farm">Your Farm</string>
+    <string name="farm_location">Farm Location</string>
+    <string name="village_district">Village • District</string>
+
+    <string name="quick_actions">Quick Actions</string>
+    <string name="my_scans">My Scans</string>
+    <string name="crop_progress">Crop Progress</string>
+
+</resources>
+

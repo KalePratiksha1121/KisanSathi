@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/kisan_background">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:clipToPadding="false"
+        android:paddingBottom="30dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp">
+
+            <!-- HEADER -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/expertBackButton"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:background="@drawable/circle_white"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:text="‹"
+                    android:textColor="@color/dark_green"
+                    android:textSize="32sp"
+                    android:fontFamily="sans"
+                    android:contentDescription="Back"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="14dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Expert Validation"
+                        android:textColor="@color/dark_green"
+                        android:textSize="23sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="Final review by an agricultural expert"
+                        android:textColor="@color/secondary_text"
+                        android:textSize="13sp"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:background="@drawable/circle_soft_green"
+                    android:gravity="center"
+                    android:text="👨‍🌾"
+                    android:textSize="20sp"/>
+
+            </LinearLayout>
+
+
+            <!-- IMAGE -->
+
+            <FrameLayout
+                android:id="@+id/expertImageCard"
+                android:layout_width="match_parent"
+                android:layout_height="245dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/language_card"
+                android:clipToOutline="true"
+                android:elevation="4dp">
+
+                <ImageView
+                    android:id="@+id/expertCropImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="Submitted crop leaf"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#16000000"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|end"
+                    android:layout_margin="14dp"
+                    android:background="@drawable/expert_icon_background"
+                    android:paddingStart="11dp"
+                    android:paddingTop="6dp"
+                    android:paddingEnd="11dp"
+                    android:paddingBottom="6dp"
+                    android:text="EXPERT REVIEW"
+                    android:textColor="@color/dark_green"
+                    android:textSize="9sp"
+                    android:textStyle="bold"/>
+
+            </FrameLayout>
+
+
+            <!-- AI RESULT -->
+
+            <LinearLayout
+                android:id="@+id/expertResultCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/disease_result_card"
+                android:elevation="3dp"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="AI PRELIMINARY RESULT"
+                    android:textColor="@color/secondary_text"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.08"/>
+
+                <TextView
+                    android:id="@+id/expertResultTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:text="Disease Not Identified"
+                    android:textColor="@color/dark_green"
+                    android:textSize="21sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/expertResultConfidence"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:text="Model confidence: --"
+                    android:textColor="@color/dark_green"
+                    android:textSize="14sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/expertResultDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:lineSpacingExtra="3dp"
+                    android:text="The AI result is preliminary."
+                    android:textColor="@color/secondary_text"
+                    android:textSize="14sp"/>
+
+            </LinearLayout>
+
+
+            <!-- VALIDATION STATUS -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Validation Status"
+                android:textColor="@color/dark_green"
+                android:textSize="17sp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:id="@+id/expertStatusCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/expert_note_background"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="17dp">
+
+                <TextView
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:background="@drawable/expert_icon_background"
+                    android:gravity="center"
+                    android:text="⏳"
+                    android:textSize="20sp"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="12dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/validationStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pending Expert Review"
+                        android:textColor="@color/dark_green"
+                        android:textSize="15sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/validationDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:lineSpacingExtra="2dp"
+                        android:text="Your case is ready for expert review."
+                        android:textColor="@color/secondary_text"
+                        android:textSize="12sp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <!-- INFORMATION -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:background="@drawable/language_card"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Why expert validation?"
+                    android:textColor="@color/dark_green"
+                    android:textSize="14sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:lineSpacingExtra="3dp"
+                    android:text="The AI result is only a preliminary assessment. An agricultural expert can review the image and validate or correct the result."
+                    android:textColor="@color/secondary_text"
+                    android:textSize="12sp"/>
+
+            </LinearLayout>
+
+
+            <!-- SEND BUTTON -->
+
+            <TextView
+                android:id="@+id/sendForReviewButton"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/expert_button_background"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:text="Send for Expert Review   →"
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>
+

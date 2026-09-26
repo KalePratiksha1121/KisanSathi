@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="kisan_background">#F8FBF6</color>
+    <color name="primary_green">#2E7D32</color>
+    <color name="dark_green">#17351F</color>
+    <color name="soft_green">#E8F5E9</color>
+    <color name="secondary_text">#617064</color>
+    <color name="white">#FFFFFF</color>
+
+</resources>

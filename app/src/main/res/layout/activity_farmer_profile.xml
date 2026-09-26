@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/kisan_background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingTop="8dp"
+            android:paddingBottom="18dp">
+
+            <TextView
+                android:id="@+id/profileBackButton"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:background="@drawable/circle_white"
+                android:gravity="center"
+                android:text="‹"
+                android:textColor="@color/dark_green"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingStart="14dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="My Profile"
+                    android:textColor="@color/dark_green"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="Manage your Kisan Sathi profile"
+                    android:textColor="@color/secondary_text"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/editProfileButton"
+                android:layout_width="70dp"
+                android:layout_height="38dp"
+                android:background="@drawable/language_card"
+                android:gravity="center"
+                android:text="Edit"
+                android:textColor="@color/dark_green"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!-- Profile Card -->
+        <LinearLayout
+            android:id="@+id/profileCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/language_card"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="18dp">
+
+            <TextView
+                android:id="@+id/profileAvatar"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:background="@drawable/circle_soft_green"
+                android:gravity="center"
+                android:text="👨‍🌾"
+                android:textSize="34sp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/profileName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Farmer Name"
+                    android:textColor="@color/dark_green"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/profileUserType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Farmer"
+                    android:textColor="@color/primary_green"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/profileMobile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="9876543210"
+                    android:textColor="@color/secondary_text"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Farm Information -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:text="Farm Information"
+            android:textColor="@color/dark_green"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/language_card"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+            <!-- Village -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:background="@drawable/circle_soft_green"
+                    android:gravity="center"
+                    android:text="📍"
+                    android:textSize="19sp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Village"
+                        android:textColor="@color/secondary_text"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/profileVillage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="Village"
+                        android:textColor="@color/dark_green"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="#E4EAE4" />
+
+            <!-- District -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:background="@drawable/circle_soft_green"
+                    android:gravity="center"
+                    android:text="🏘️"
+                    android:textSize="19sp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="District"
+                        android:textColor="@color/secondary_text"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/profileDistrict"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="District"
+                        android:textColor="@color/dark_green"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Settings -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:text="Settings"
+            android:textColor="@color/dark_green"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- Language -->
+        <TextView
+            android:id="@+id/languageSetting"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/language_card"
+            android:gravity="center_vertical"
+            android:paddingStart="18dp"
+            android:text="🌐   Language"
+            android:textColor="@color/dark_green"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <!-- Notifications -->
+        <TextView
+            android:id="@+id/notificationSetting"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/language_card"
+            android:gravity="center_vertical"
+            android:paddingStart="18dp"
+            android:text="🔔   Notifications"
+            android:textColor="@color/dark_green"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <!-- Offline -->
+        <TextView
+            android:id="@+id/offlineSetting"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/language_card"
+            android:gravity="center_vertical"
+            android:paddingStart="18dp"
+            android:text="📴   Offline &amp; Sync"
+            android:textColor="@color/dark_green"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <!-- About -->
+        <TextView
+            android:id="@+id/aboutSetting"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/language_card"
+            android:gravity="center_vertical"
+            android:paddingStart="18dp"
+            android:text="ℹ️   About Kisan Sathi"
+            android:textColor="@color/dark_green"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
+
+    </LinearLayout>
+
+</ScrollView>
+

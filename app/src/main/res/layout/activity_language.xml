@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/kisan_background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="24dp"
+        android:paddingTop="40dp"
+        android:paddingRight="24dp"
+        android:paddingBottom="28dp">
+
+        <!-- Top Icon -->
+        <TextView
+            android:id="@+id/languageIcon"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/language_icon_background"
+            android:gravity="center"
+            android:text="🌱"
+            android:textSize="30sp" />
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:gravity="center"
+            android:text="@string/choose_language"
+            android:textColor="@color/dark_green"
+            android:textSize="29sp"
+            android:textStyle="bold" />
+
+        <!-- Subtitle -->
+        <TextView
+            android:id="@+id/subtitleText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:lineSpacingExtra="3dp"
+            android:text="@string/choose_language_subtitle"
+            android:textColor="@color/secondary_text"
+            android:textSize="15sp" />
+
+        <!-- Language Cards -->
+
+        <TextView
+            android:id="@+id/englishButton"
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/language_card"
+            android:drawablePadding="14dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="@string/english"
+            android:textColor="@color/dark_green"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/marathiButton"
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/language_card"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="@string/marathi"
+            android:textColor="@color/dark_green"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/hindiButton"
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/language_card"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="@string/hindi"
+            android:textColor="@color/dark_green"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/gujaratiButton"
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/language_card"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="@string/gujarati"
+            android:textColor="@color/dark_green"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/punjabiButton"
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/language_card"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="@string/punjabi"
+            android:textColor="@color/dark_green"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <!-- Continue -->
+        <TextView
+            android:id="@+id/continueButton"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_marginTop="26dp"
+            android:background="@drawable/continue_button"
+            android:gravity="center"
+            android:text="@string/continue_text"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</ScrollView>
+

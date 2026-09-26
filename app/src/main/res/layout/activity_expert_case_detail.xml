@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/kisan_background"
+    android:fillViewport="true"
+    android:clipToPadding="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="18dp"
+        android:paddingEnd="18dp"
+        android:paddingTop="18dp"
+        android:paddingBottom="30dp">
+
+        <!-- HEADER -->
+
+        <LinearLayout
+            android:id="@+id/caseHeaderSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/caseBackButton"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:background="@drawable/circle_white"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:text="‹"
+                android:textColor="@color/dark_green"
+                android:textSize="32sp"
+                android:contentDescription="Back"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="13dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Case Review"
+                    android:textColor="@color/dark_green"
+                    android:textSize="22sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/caseIdText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="Case KS-CASE-001"
+                    android:textColor="@color/secondary_text"
+                    android:textSize="12sp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/casePriorityText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/expert_icon_background"
+                android:paddingStart="10dp"
+                android:paddingTop="7dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="7dp"
+                android:text="PENDING"
+                android:textColor="@color/dark_green"
+                android:textSize="9sp"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+
+        <!-- CROP IMAGE -->
+
+        <FrameLayout
+            android:id="@+id/caseImageCard"
+            android:layout_width="match_parent"
+            android:layout_height="255dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/expert_case_card"
+            android:clipToOutline="true"
+            android:elevation="3dp">
+
+            <!-- ACTUAL SUBMITTED IMAGE -->
+
+            <ImageView
+                android:id="@+id/caseImageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="Submitted crop image"
+                android:scaleType="centerCrop"
+                android:background="@drawable/expert_image_placeholder"/>
+
+            <!-- Image fallback message -->
+
+            <LinearLayout
+                android:id="@+id/imagePlaceholder"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🌿"
+                    android:textSize="62sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:text="Image unavailable"
+                    android:textColor="@color/dark_green"
+                    android:textSize="13sp"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|end"
+                android:layout_margin="13dp"
+                android:background="@drawable/expert_icon_background"
+                android:paddingStart="9dp"
+                android:paddingTop="6dp"
+                android:paddingEnd="9dp"
+                android:paddingBottom="6dp"
+                android:text="CASE IMAGE"
+                android:textColor="@color/dark_green"
+                android:textSize="9sp"
+                android:textStyle="bold"/>
+
+        </FrameLayout>
+
+
+        <!-- AI RESULT -->
+
+        <LinearLayout
+            android:id="@+id/caseAiResultCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="17dp"
+            android:background="@drawable/disease_result_card"
+            android:elevation="2dp"
+            android:orientation="vertical"
+            android:padding="19dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AI PRELIMINARY RESULT"
+                android:textColor="@color/secondary_text"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.08"/>
+
+            <TextView
+                android:id="@+id/caseAiResultTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Disease Not Identified"
+                android:textColor="@color/dark_green"
+                android:textSize="21sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/caseAiConfidence"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="AI confidence: 54.2%"
+                android:textColor="@color/dark_green"
+                android:textSize="13sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/caseAiDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp"
+                android:lineSpacingExtra="3dp"
+                android:text="Expert assessment is required."
+                android:textColor="@color/secondary_text"
+                android:textSize="13sp"/>
+
+        </LinearLayout>
+
+
+        <!-- FARMER INFORMATION -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="23dp"
+            android:text="Farmer Information"
+            android:textColor="@color/dark_green"
+            android:textSize="17sp"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:id="@+id/caseFarmerInfoCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/expert_case_card"
+            android:orientation="vertical"
+            android:padding="17dp">
+
+            <TextView
+                android:id="@+id/caseFarmerName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Demo Farmer"
+                android:textColor="@color/dark_green"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/caseFarmerVillage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:text="Village: Demo Village"
+                android:textColor="@color/secondary_text"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/caseFarmerDistrict"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="District: Demo District"
+                android:textColor="@color/secondary_text"
+                android:textSize="12sp"/>
+
+        </LinearLayout>
+
+
+        <!-- EXPERT ASSESSMENT -->
+
+        <LinearLayout
+            android:id="@+id/caseAssessmentCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="23dp"
+            android:background="@drawable/expert_case_card"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Expert Assessment"
+                android:textColor="@color/dark_green"
+                android:textSize="17sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Review the AI result and provide your professional assessment."
+                android:textColor="@color/secondary_text"
+                android:textSize="12sp"/>
+
+            <!-- QUICK OPTIONS -->
+
+            <TextView
+                android:id="@+id/confirmDiseaseButton"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/expert_option_button"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:text="✓  Confirm AI Result"
+                android:textColor="@color/dark_green"
+                android:textSize="13sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/correctDiseaseButton"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/expert_option_button"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:text="✎  Correct Disease"
+                android:textColor="@color/dark_green"
+                android:textSize="13sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/unableToIdentifyButton"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/expert_option_button"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:text="⚠  Unable to Identify"
+                android:textColor="@color/dark_green"
+                android:textSize="13sp"
+                android:textStyle="bold"/>
+
+            <!-- DISEASE -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="Expert Disease / Assessment"
+                android:textColor="@color/dark_green"
+                android:textSize="13sp"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/expertDiseaseInput"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/expert_input_background"
+                android:hint="Enter confirmed disease"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:textColor="@color/dark_green"
+                android:textColorHint="@color/secondary_text"
+                android:textSize="13sp"/>
+
+            <!-- REMARKS -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Expert Remarks"
+                android:textColor="@color/dark_green"
+                android:textSize="13sp"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/expertRemarksInput"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/expert_input_background"
+                android:gravity="top"
+                android:hint="Add observations or recommendations..."
+                android:inputType="textMultiLine"
+                android:padding="14dp"
+                android:textColor="@color/dark_green"
+                android:textColorHint="@color/secondary_text"
+                android:textSize="13sp"/>
+
+            <!-- SUBMIT -->
+
+            <TextView
+                android:id="@+id/submitExpertResultButton"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/expert_button_background"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:text="Submit Expert Result   →"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+
+        <!-- SUBMITTED -->
+
+        <LinearLayout
+            android:id="@+id/caseSubmittedCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/expert_dashboard_banner"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="25dp">
+
+            <TextView
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:background="@drawable/expert_icon_background"
+                android:gravity="center"
+                android:text="✓"
+                android:textColor="@color/dark_green"
+                android:textSize="26sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Expert Result Submitted"
+                android:textColor="@color/dark_green"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:gravity="center"
+                android:text="This case has been marked as reviewed."
+                android:textColor="@color/secondary_text"
+                android:textSize="12sp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

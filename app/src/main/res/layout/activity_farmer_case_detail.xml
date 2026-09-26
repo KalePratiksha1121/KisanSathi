@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/kisan_background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="18dp"
+        android:paddingEnd="18dp"
+        android:paddingTop="18dp"
+        android:paddingBottom="30dp">
+
+        <!-- HEADER -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/farmerCaseBackButton"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:background="@drawable/circle_white"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:text="‹"
+                android:textColor="@color/dark_green"
+                android:textSize="32sp"
+                android:contentDescription="Back"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="13dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Crop Case"
+                    android:textColor="@color/dark_green"
+                    android:textSize="22sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/farmerCaseIdText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="Case KS-00000000"
+                    android:textColor="@color/secondary_text"
+                    android:textSize="12sp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <!-- STATUS -->
+
+        <TextView
+            android:id="@+id/farmerCaseStatusText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/expert_dashboard_banner"
+            android:gravity="center"
+            android:padding="13dp"
+            android:text="⏳ WAITING FOR EXPERT REVIEW"
+            android:textColor="@color/dark_green"
+            android:textSize="12sp"
+            android:textStyle="bold"/>
+
+
+        <!-- IMAGE -->
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="255dp"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/expert_case_card"
+            android:clipToOutline="true"
+            android:elevation="3dp">
+
+            <ImageView
+                android:id="@+id/farmerCropImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="Crop image"
+                android:scaleType="centerCrop"/>
+
+            <LinearLayout
+                android:id="@+id/farmerImagePlaceholder"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🌿"
+                    android:textSize="55sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Crop image unavailable"
+                    android:textColor="@color/dark_green"
+                    android:textSize="13sp"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+
+        <!-- AI RESULT -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/disease_result_card"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AI PRELIMINARY RESULT"
+                android:textColor="@color/secondary_text"
+                android:textSize="10sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/farmerAiDisease"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:text="Disease Not Identified"
+                android:textColor="@color/dark_green"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/farmerAiConfidence"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="AI confidence: 54.2%"
+                android:textColor="@color/dark_green"
+                android:textSize="12sp"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+
+        <!-- EXPERT RESULT -->
+
+        <LinearLayout
+            android:id="@+id/farmerExpertResultCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/expert_case_card"
+            android:orientation="vertical"
+            android:padding="19dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="✓ EXPERT VALIDATED RESULT"
+                android:textColor="@color/dark_green"
+                android:textSize="11sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Expert Assessment"
+                android:textColor="@color/secondary_text"
+                android:textSize="11sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/farmerExpertDisease"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Tomato Early Blight"
+                android:textColor="@color/dark_green"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dp"
+                android:text="Expert Remarks"
+                android:textColor="@color/secondary_text"
+                android:textSize="11sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/farmerExpertRemarks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:lineSpacingExtra="3dp"
+                android:text="Expert remarks will appear here."
+                android:textColor="@color/dark_green"
+                android:textSize="13sp"/>
+
+        </LinearLayout>
+
+
+        <!-- PROGRESS -->
+
+        <TextView
+            android:id="@+id/farmerProgressButton"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/expert_button_background"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="📈  Track Crop Progress  →"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+</ScrollView>

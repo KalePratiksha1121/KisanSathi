@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/kisan_background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Mobile Icon -->
+
+        <TextView
+            android:id="@+id/mobileIcon"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="45dp"
+            android:background="@drawable/language_icon_background"
+            android:gravity="center"
+            android:text="📱"
+            android:textSize="30sp" />
+
+        <!-- Title -->
+
+        <TextView
+            android:id="@+id/mobileTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:text="@string/mobile_verification"
+            android:textColor="@color/dark_green"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <!-- Subtitle -->
+
+        <TextView
+            android:id="@+id/mobileSubtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:lineSpacingExtra="3dp"
+            android:text="@string/mobile_verification_subtitle"
+            android:textColor="@color/secondary_text"
+            android:textSize="15sp" />
+
+        <!-- Mobile Label -->
+
+        <TextView
+            android:id="@+id/mobileLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="42dp"
+            android:text="@string/mobile_number"
+            android:textColor="@color/dark_green"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- Mobile Input -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/language_card"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="58dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="+91"
+                android:textColor="@color/dark_green"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="32dp"
+                android:background="@color/soft_green" />
+
+            <EditText
+                android:id="@+id/mobileInput"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:hint="@string/mobile_number_hint"
+                android:inputType="phone"
+                android:maxLength="10"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:textColor="@color/dark_green"
+                android:textColorHint="@color/secondary_text"
+                android:textSize="17sp" />
+
+        </LinearLayout>
+
+        <!-- Error -->
+
+        <TextView
+            android:id="@+id/mobileError"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="#C62828"
+            android:textSize="13sp"
+            android:visibility="gone" />
+
+        <!-- Continue -->
+
+        <TextView
+            android:id="@+id/sendOtpButton"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/continue_button"
+            android:gravity="center"
+            android:text="Continue"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</ScrollView>
+

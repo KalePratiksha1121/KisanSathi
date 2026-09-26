@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/p2">
+
+    <LinearLayout
+        android:id="@+id/splashContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="32dp">
+
+        <TextView
+            android:id="@+id/tagline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="210dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginLeft="30dp"
+            android:gravity="center"
+            android:text="@string/splash_tagline"
+            android:textColor="@color/secondary_text"
+            android:textStyle="bold|italic"
+            android:textSize="15sp" />
+
+        <!-- Moving horizontal loading line -->
+        <ProgressBar
+            android:id="@+id/loadingProgress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="180dp"
+            android:layout_height="4dp"
+            android:layout_marginTop="385dp"
+            android:max="100"
+            android:progress="0"
+            android:indeterminate="false"
+            android:progressTint="@color/primary_green"
+            android:backgroundTint="@color/soft_green" />
+
+        <TextView
+            android:id="@+id/loadingText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/loading"
+            android:textColor="@color/secondary_text"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/appName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="197dp"
+        android:layout_marginRight="100dp"
+        android:layout_marginLeft="100dp"
+        android:text="@string/app_name"
+        android:textColor="@color/dark_green"
+        android:textSize="32sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>
+
